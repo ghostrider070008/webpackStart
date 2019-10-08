@@ -1,6 +1,10 @@
-$bg-color: black;
+@import "~bootstrap/scss/bootstrap";
+@import "typografy";
+$bg-color: orange;
 h1{
   color: $bg-color;
+  font-family: $base-font;
+  padding: $title-padding;
 }
 body{
   background-image: url("../assets/img/1.jpg");

@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
-$base-font: 'Roboto';
+@import "../fonts/Montserrat-Black.ttf";
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Black.ttf) format("truetype"); /* все современные браузеры */
+}
+$base-font: 'Montserrat';
+$base-font2: 'Roboto';
 $title-padding: 3em;
 
 h1 {
-  font-family: $base-font;
+  font-family: $base-font2;
   padding: $title-padding;
 }
