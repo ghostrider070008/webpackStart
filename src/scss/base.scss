@@ -7,5 +7,16 @@ h1{
   padding: $title-padding;
 }
 body{
-  background-image: url("../assets/img/1.jpg");
+  *background-image: url("../assets/img/1.jpg");
+}
+
+.navbar-nav {
+  .nav-item {
+      a{
+        font-family: Circle-regular;
+      }
+      &:hover {
+      color: #c1a067;
+    }
+    }
 }

@@ -34,6 +34,26 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(scss)$/,
+                use: [{
+                    loader: 'style-loader', // inject CSS to page
+                }, {
+                    loader: 'css-loader', // translates CSS into CommonJS modules
+                }, {
+                    loader: 'postcss-loader', // Run post css actions
+                    options: {
+                        plugins: function () { // post css plugins, can be exported to postcss.config.js
+                            return [
+                                require('precss'),
+                                require('autoprefixer')
+                            ];
+                        }
+                    }
+                }, {
+                    loader: 'sass-loader' // compiles Sass to CSS
+                }]
+            },
+            {
         test: /\.(gif|png|jpg|jpeg|svg)?$/,
         loader: 'file-loader',
         options: {
@@ -63,7 +83,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
-            template: './src/index.html',
+            template: './src/html/index.html',
             filename: 'index.html'
         })
     ].concat(htmlPlugins),

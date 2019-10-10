@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import "../fonts/Montserrat-Black.ttf";
+@import "../fonts/Circle-regular.ttf";
 @font-face {
-  font-family: "Montserrat";
-  src: url(../fonts/Montserrat-Black.ttf) format("truetype"); /* все современные браузеры */
+  font-family: "Circle-regular";
+  src: url(../fonts/Circle-regular.ttf) format("truetype"); /* все современные браузеры */
 }
 $base-font: 'Montserrat';
 $base-font2: 'Roboto';
